@@ -1,4 +1,5 @@
-# Getting Started with Create React App
+[![pages-build-deployment](https://github.com/jmvaliente/mobilecommerce/actions/workflows/pages/pages-build-deployment/badge.svg)](https://github.com/jmvaliente/mobilecommerce/actions/workflows/pages/pages-build-deployment)
+# mobilecommerce
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
