@@ -3,7 +3,7 @@ import Image from '../../components/image/Image'
 import Actions from '../../components/actions/Actions'
 import Description from '../../components/description/Description'
 
-const ProductDetail = ({ mobileDetail, id }) => {
+const ProductDetail = ({ mobileDetail, addMobileCart, selectMobile, setSelectMobile }) => {
   const { imgUrl, colors, internalMemory } = mobileDetail
   return (
     <div className='container is-widescreen'>
@@ -18,7 +18,13 @@ const ProductDetail = ({ mobileDetail, id }) => {
             <Description mobileDetail={mobileDetail} />
           </div>
           <div className='tile is-child box'>
-            <Actions colors={colors} internalMemory={internalMemory} id={id} />
+            <Actions
+              colors={colors}
+              internalMemory={internalMemory}
+              addMobileCart={addMobileCart}
+              selectMobile={selectMobile}
+              setSelectMobile={setSelectMobile}
+            />
           </div>
         </div>
       </div>

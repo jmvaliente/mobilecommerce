@@ -1,8 +1,7 @@
 const Description = ({ mobileDetail }) => {
-  console.log(mobileDetail)
   const { brand, model, price, cpu, ram, os, displayResolution, battery, primaryCamera, secondaryCamera, dimensions, weight } = mobileDetail
   return (
-    <div class='content'>
+    <div className='content'>
       <h2>Details</h2>
       <ul>
         <li><strong>Brand:</strong> {brand}</li>

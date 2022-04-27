@@ -1,23 +1,10 @@
-import { useState } from 'react'
-import { addCartMobile } from '../../../services/service'
-
-const Actions = ({ colors = [], internalMemory = [], id }) => {
-  const [selectMobile, setSelectMobile] = useState({
-    id,
-    colorCode: '0',
-    storageCode: '0'
-  })
-
+const Actions = ({ colors = [], internalMemory = [], addMobileCart, selectMobile, setSelectMobile }) => {
   const handleChange = (key, value) => {
     setSelectMobile({ ...selectMobile, [key]: value.toString() })
   }
 
   const handleSubmit = async () => {
-    return await addCartMobile(selectMobile)
-      .then((result) => {
-        result.count ? console.log(result) : Error('Error')
-      })
-      .catch(error => Error(error))
+    addMobileCart()
   }
 
   return (
