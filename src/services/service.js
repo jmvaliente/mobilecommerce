@@ -41,7 +41,11 @@ export const addCartMobile = async (dataMobile) => {
     body: JSON.stringify(dataMobile)
   })
     .then(response => response.json())
-    .then(data => data)
+    .then(data => {
+      const itemsStorage = JSON.parse(window.sessionStorage.getItem('cart')) || []
+      window.sessionStorage.setItem('cart', JSON.stringify([...itemsStorage, dataMobile]))
+      return data
+    })
     .catch(error => Error(error))
   return data
 }

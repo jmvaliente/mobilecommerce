@@ -3,7 +3,7 @@ import { useState, useEffect } from 'react'
 import { getMobileDetail, addCartMobile } from '../../../services/service'
 
 const enhance = View => {
-  const ProductDetail = () => {
+  const ProductDetail = ({ updateCart }) => {
     const { id } = useParams()
     const [mobileDetail, setMobileDetail] = useState({})
     const [selectMobile, setSelectMobile] = useState({
@@ -23,7 +23,7 @@ const enhance = View => {
     const addMobileCart = async () => {
       return await addCartMobile(selectMobile)
         .then((result) => {
-          result.count ? console.log(result) : Error('Error')
+          result.count ? updateCart(selectMobile) : Error('Error')
         })
         .catch(error => Error(error))
     }

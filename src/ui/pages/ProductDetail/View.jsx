@@ -3,7 +3,7 @@ import Image from '../../components/image/Image'
 import Actions from '../../components/actions/Actions'
 import Description from '../../components/description/Description'
 
-const ProductDetail = ({ mobileDetail, addMobileCart, selectMobile, setSelectMobile }) => {
+const ProductDetail = ({ mobileDetail, addMobileCart, selectMobile, setSelectMobile, setItemsCart }) => {
   const { imgUrl, colors, internalMemory } = mobileDetail
   return (
     <div className='container is-widescreen mt-5'>
@@ -24,6 +24,7 @@ const ProductDetail = ({ mobileDetail, addMobileCart, selectMobile, setSelectMob
               addMobileCart={addMobileCart}
               selectMobile={selectMobile}
               setSelectMobile={setSelectMobile}
+              setItemsCart={setItemsCart}
             />
           </div>
         </div>
