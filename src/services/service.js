@@ -1,19 +1,33 @@
-const URL_API = 'https://front-test-api.herokuapp.com'
+import { URL_API } from '../constants/index'
+import { existCache, existCacheMobile } from './cacheUtils'
 
 export const getMobileList = async () => {
-  // eslint-disable-next-line
-  const data = await fetch(`${URL_API}/api/product`)
-    .then(response => response.json())
-    .then(data => data)
-  return data
+  if (existCache()) {
+    const cache = window.sessionStorage.getItem('data')
+    return JSON.parse(cache)
+  } else {
+    // eslint-disable-next-line
+    const data = await fetch(`${URL_API}/api/product`)
+      .then(response => response.json())
+      .then(data => data)
+    window.sessionStorage.setItem('data', JSON.stringify(data))
+    window.sessionStorage.setItem('date', new Date().getTime())
+    return data
+  }
 }
 
 export const getMobileDetail = async (id) => {
-  // eslint-disable-next-line
-  const data = await fetch(`${URL_API}/api/product/${id}`)
-    .then(response => response.json())
-    .then(data => data)
-  return data
+  if (existCacheMobile(id)) {
+    const cache = window.sessionStorage.getItem(id)
+    return JSON.parse(cache)
+  } else {
+    // eslint-disable-next-line
+    const data = await fetch(`${URL_API}/api/product/${id}`)
+      .then(response => response.json())
+      .then(data => data)
+    window.sessionStorage.setItem(id, JSON.stringify(data))
+    return data
+  }
 }
 
 export const addCartMobile = async (dataMobile) => {
