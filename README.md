@@ -27,6 +27,18 @@ _Mode Dev_
 npm run start
 ```
 
+_Check Lint_
+
+```
+npm run lint
+```
+
+_Launch Test_
+
+```
+npm run test
+```
+
 ## Deploy 📦
 
 _production live_
