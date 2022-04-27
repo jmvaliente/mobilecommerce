@@ -1,3 +1,5 @@
+import { Link } from 'react-router-dom'
+
 const Actions = ({ colors = [], internalMemory = [], addMobileCart, selectMobile, setSelectMobile }) => {
   const handleChange = (key, value) => {
     setSelectMobile({ ...selectMobile, [key]: value.toString() })
@@ -33,8 +35,12 @@ const Actions = ({ colors = [], internalMemory = [], addMobileCart, selectMobile
           </ul>
         </div>
       </div>
-      <div className='column' onClick={() => handleSubmit()}>
-        <button className='button is-large is-success'>Add to cart</button>
+
+      <div className='column is-half' onClick={() => handleSubmit()}>
+        <button className='button mt-4'>Add to cart</button>
+        <Link to='/'>
+          <button className='button m-4 is-right'>Go Home</button>
+        </Link>
       </div>
     </div>
   )
