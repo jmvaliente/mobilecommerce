@@ -1,4 +1,7 @@
-[![pages-build-deployment](https://github.com/jmvaliente/mobilecommerce/actions/workflows/pages/pages-build-deployment/badge.svg)](https://github.com/jmvaliente/mobilecommerce/actions/workflows/pages/pages-build-deployment)
+[![pages-build-deployment](https://github.com/jmvaliente/mobilecommerce/actions/workflows/pages/pages-build-deployment/badge.svg)](https://mobilecommerce.vercel.app/)
+[![Generic badge](https://img.shields.io/badge/Vercel_Deploy-OK-<COLOR>.svg)](https://mobilecommerce.vercel.app/)
+[![JavaScript](https://img.shields.io/badge/--F7DF1E?logo=javascript&logoColor=000)](https://www.javascript.com/)
+[![GitHub](https://img.shields.io/badge/--181717?logo=github&logoColor=ffffff)](https://github.com/)
 # mobilecommerce
 
 _App Mobile Ecommerce_
@@ -42,10 +45,12 @@ npm run test
 ## Deploy 📦
 
 _production live_
-https://github.com/jmvaliente/mobilecommerce/deployments/activity_log?environment=Production
+https://mobilecommerce.vercel.app/
 
 
 ## Build with 🛠️
 
 * [bulma.io](https://bulma.io/) - CSS boilerplate
+
+[![ForTheBadge makes-people-smile](http://ForTheBadge.com/images/badges/makes-people-smile.svg)](http://ForTheBadge.com)
 
