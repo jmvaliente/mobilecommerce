@@ -15,7 +15,7 @@ const ProductDetail = ({ mobileDetail }) => {
         </div>
         <div className='tile is-vertical is-parent'>
           <div className='tile is-child box'>
-            <Description />
+            <Description mobileDetail={mobileDetail} />
           </div>
           <div className='tile is-child box'>
             <Actions />
