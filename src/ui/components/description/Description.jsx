@@ -1,18 +1,6 @@
 const Description = ({ mobileDetail }) => {
   console.log(mobileDetail)
   const { brand, model, price, cpu, ram, os, displayResolution, battery, primaryCamera, secondaryCamera, dimensions, weight } = mobileDetail
-  /*
-  o Marca
-o Modelo
-o Precio
-o CPU
-o RAM
-o Sistema Operativo
-o Resolucion de pantalla
-o Bateria
-o Camaras
-o Dimensiones
-o Peso */
   return (
     <div class='content'>
       <h2>Details</h2>

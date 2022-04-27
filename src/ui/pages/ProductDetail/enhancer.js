@@ -13,7 +13,7 @@ const enhance = View => {
       }
       fetchMobileDetailData()
     }, [])
-    return <View mobileDetail={mobileDetail} />
+    return <View mobileDetail={mobileDetail} id={id} />
   }
   return ProductDetail
 }
