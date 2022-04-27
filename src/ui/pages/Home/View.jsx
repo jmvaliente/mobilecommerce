@@ -3,10 +3,10 @@ import { Link } from 'react-router-dom'
 import Card from '../../components/card/Card'
 import Search from '../../components/search/Search'
 
-const Home = ({ mobileList }) => {
+const Home = ({ mobileList, setSearch }) => {
   return (
-    <>
-      <Search />
+    <div className='container'>
+      <Search setSearch={setSearch} />
       {mobileList.map((groupList, idx) => {
         return (
           <div key={idx} className='tile is-ancestor'>
@@ -15,7 +15,6 @@ const Home = ({ mobileList }) => {
                 <div key={mobile.id} className='tile is-parent'>
                   <Link to={`/${mobile.id}`}>
                     <Card mobile={mobile} />
-
                   </Link>
                 </div>
               )
@@ -23,7 +22,7 @@ const Home = ({ mobileList }) => {
           </div>
         )
       })}
-    </>
+    </div>
   )
 }
 

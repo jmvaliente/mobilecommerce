@@ -1,20 +1,21 @@
-const Search = () => {
+const Search = ({ setSearch }) => {
+  const handleChange = (value) => {
+    setSearch(value)
+  }
+
   return (
-    <div className='level-right'>
-      <div className='level-item'>
-        <div className='field has-addons'>
-          <p className='control'>
-            <input className='input' type='text' placeholder='Find a post' />
-          </p>
-          <p className='control'>
-            <button className='button'>
-              Search
-            </button>
-          </p>
+    <div className='m-4'>
+      <div className='level-right'>
+        <div className='level-item'>
+          <div className='field has-addons'>
+            <p className='control'>
+              <input className='input' onChange={(event) => handleChange(event.target.value)} type='text' placeholder='Find Devices' />
+            </p>
+          </div>
         </div>
+        <div className='level-item' />
+        <div className='level-item' />
       </div>
-      <div className='level-item' />
-      <div className='level-item' />
     </div>
   )
 }
