@@ -6,7 +6,7 @@ import Description from '../../components/description/Description'
 const ProductDetail = ({ mobileDetail, addMobileCart, selectMobile, setSelectMobile }) => {
   const { imgUrl, colors, internalMemory } = mobileDetail
   return (
-    <div className='container is-widescreen'>
+    <div className='container is-widescreen mt-5'>
       <div className='tile is-ancestor'>
         <div className='tile is-6 is-parent'>
           <div className='tile is-child box'>
