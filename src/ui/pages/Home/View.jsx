@@ -1,5 +1,5 @@
 import React from 'react'
-
+import { Link } from 'react-router-dom'
 import Card from '../../components/card/Card'
 import Search from '../../components/search/Search'
 
@@ -13,7 +13,10 @@ const Home = ({ mobileList }) => {
             {groupList.map(mobile => {
               return (
                 <div key={mobile.id} className='tile is-parent'>
-                  <Card mobile={mobile} />
+                  <Link to={`/${mobile.id}`}>
+                    <Card mobile={mobile} />
+
+                  </Link>
                 </div>
               )
             })}
