@@ -36,8 +36,8 @@ const Actions = ({ colors = [], internalMemory = [], addMobileCart, selectMobile
         </div>
       </div>
 
-      <div className='column is-half' onClick={() => handleSubmit()}>
-        <button className='button mt-4'>Add to cart</button>
+      <div className='column is-half'>
+        <button className='button mt-4' onClick={() => handleSubmit()}>Add to cart</button>
         <Link to='/'>
           <button className='button m-4 is-right'>Go Home</button>
         </Link>
