@@ -1,20 +1,20 @@
 const Search = () => {
   return (
-    <div class='level-right'>
-      <div class='level-item'>
-        <div class='field has-addons'>
-          <p class='control'>
-            <input class='input' type='text' placeholder='Find a post' />
+    <div className='level-right'>
+      <div className='level-item'>
+        <div className='field has-addons'>
+          <p className='control'>
+            <input className='input' type='text' placeholder='Find a post' />
           </p>
-          <p class='control'>
-            <button class='button'>
+          <p className='control'>
+            <button className='button'>
               Search
             </button>
           </p>
         </div>
       </div>
-      <div class='level-item' />
-      <div class='level-item' />
+      <div className='level-item' />
+      <div className='level-item' />
     </div>
   )
 }
