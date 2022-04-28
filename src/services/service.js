@@ -10,6 +10,7 @@ export const getMobileList = async () => {
     const data = await fetch(`${URL_API}/api/product`)
       .then(response => response.json())
       .then(data => data)
+    window.sessionStorage.clear()
     window.sessionStorage.setItem('data', JSON.stringify(data))
     window.sessionStorage.setItem('date', new Date().getTime())
     return data

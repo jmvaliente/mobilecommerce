@@ -1,6 +1,6 @@
 import { CACHE_DURATION } from '../constants/index'
 
-export const hourCache = () => Number(window.sessionStorage.getItem('date')) < CACHE_DURATION + Number(window.sessionStorage.getItem('date'))
+export const hourCache = () => Number(new Date().getTime()) < CACHE_DURATION + Number(window.sessionStorage.getItem('date'))
 
 export const existCache = () => window.sessionStorage.getItem('data') && hourCache()
 
